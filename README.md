@@ -1,6 +1,6 @@
 # API Endpoints
 
-## GET /<collection-user>/<article-id>
+## GET `/<collection-user>/<article-id>`
 
 - Contains all of the data about the article
   - Stored in the `GLOBALS` JS variable
