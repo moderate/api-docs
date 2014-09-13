@@ -1,6 +1,6 @@
 # API Endpoints
 
-## GET `/<collection-user>/<article-id>`
+## GET /<collection-user>/<article-id>
 
 - Contains all of the data about the article
   - Stored in the `GLOBALS` JS variable
@@ -13,7 +13,7 @@
       - The `content` of the article contains all of the actual content from that article (shocker)
         - `paragraphs` is an array of JSON object blobs that contain the text of the paragraph, the type of data, and the markups (if any) which are all explained below
 
-#### A `user`
+#### The user
 
 A user actually contains a **lot** of data, so documented below are the most useful ones:
 
@@ -27,14 +27,14 @@ A user actually contains a **lot** of data, so documented below are the most use
 
 Then there is a bunch of data about how many posts you've read, upvoted, unvoted, etc.
 
-#### A `paragraph`
+#### The paragraph
   - `type` - The type of content that it is
     - 1: text
     - 4: image
   - `text` - Exactly what it sounds like.  Contains the text of that paragraph (more of a grouping, really) without any markup whatsoever - totally plaintext.
   - `markups` - Contains the styling that is applied to certain parts of the text (since none is provided above) and described below
 
-#### A `markup`
+#### The markup object
   - `type` - The kind of markup that it is
     - 2: italics
     - 3: a link to something
