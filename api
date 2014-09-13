@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var request = require('superagent')
+var url = process.argv[2];
+if(url.indexOf('medium.com') == -1 )
+	url = 'http://medium.com' + url;
+
+request.get(url)
+	.end(function(err, res){
+		var start = res.text.indexOf("var GLOBALS = {"),
+			end = res.text.lastIndexOf("}") + 1;
+
+		var globals = res.text.substring(start, end)
+		eval(globals) // Assigns GLOBALS
+		console.log(GLOBALS);
+	});
