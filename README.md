@@ -43,8 +43,8 @@ Then there is a bunch of data about how many posts you've read, upvoted, unvoted
   - `title` and `ref` - (see above)
 
 ## GET `/me/activity`
-- HEADERS
+  - HEADERS
     - Accept: application/json
 
-- Returns the activity feed on the main page
+  - Returns the activity feed on the main page
 
