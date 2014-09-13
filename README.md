@@ -2,6 +2,8 @@
 
 ## GET `/<collection-user>/<article-id>`
 
+*Note*: if you send `Accept: application/json` in the header, you'll get back the raw JSON (with that weird thing in front of it), and no extra content.  Way faster to do this instead of the whole HTML
+
 - Contains all of the data about the article
   - Stored in the `GLOBALS` JS variable
     - Has data about the current user (useful for the auth-scheme)
